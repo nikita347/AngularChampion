@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="angular.js"></script>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <!--<script src="services.js"></script>-->
+    <!--<script src="FactoryController.js"></script>-->
+
+    <script src="controllers.js"></script>
+    <script src="angular-route.js"></script>
+</head>
+<body ng-app="ChampionApp" ng-controller="driversController">
+
+    <!--created partial view-->
+
+    <ng-view></ng-view>
+
+    <!--below code is if any partial is not created-->
+    <!--<table border="1">
+        <thead>
+            <tr><th colspan="4">Drivers ChampionShip</th></tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="driver in driversList | filter:searchFilters">
+                <td>{{$index + 1}}</td>
+                <td>
+                    <img src="img/flags/{{driver.nationality}}.png" />
+                    {{driver.Driver.givenName}}&nbsp;{{driver.Driver.familyName}}
+                </td>
+                <td>{{driver.Constructors[0].name}}</td>
+                <td>{{driver.point}}</td>
+            </tr>
+        </tbody>
+    </table>-->
+    <ul>
+        <li><a href="drivers">Click</a></li>
+    </ul>
+    <input type="text" ng-model="nameFilter" placeholder="Search..."/>
+
+</body>
+</html>
